@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Here is the user info</h1>
+    {% if key %}
+    <ol>
+      {% for person in key %}
+      <li>user info:</li>
+        <ul>
+          <li>first name: {{person.first_name}}</li>
+          <li>last name: {{person.last_name}}</li>
+          <li>email: {{person.email}}</li>
+          {% if person.nick_name %}
+
+          <li>nick name: {{person.nick_name}}</li>
+          {% endif %}
+
+        </ul>
+      {% endfor %}
+    </ol>
+      {% endif %}
+
+  </body>
+</html>
